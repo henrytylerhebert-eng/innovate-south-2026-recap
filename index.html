@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovate South 2026</title>
+<meta name="description" content="A premium editorial recap of Innovate South 2026 in Lafayette, Louisiana, featuring founders, investors, ecosystem builders, and keynote sessions.">
+<meta property="og:title" content="Innovate South 2026 Event Recap">
+<meta property="og:description" content="Innovation with an accent: a digital recap of Innovate South 2026.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-applause.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --is-purple:#2f2156;
+  --is-teal:#6bc8c4;
+  --is-orange:#f16b36;
+  --is-magenta:#c8187c;
+  --is-yellow:#ffd630;
+  --is-navy:#2f2156;
+  --bg:#0B0D12;
+  --surface:#12151C;
+  --surface2:#191D27;
+  --border:rgba(255,255,255,0.08);
+  --text:#EDE9E1;
+  --muted:#9CA3AF;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Helvetica Now Display', Helvetica, Arial, sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:0;min-height:480px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%; transition: transform 0.5s ease-out;}
+.hero:hover .hero-img { transform: scale(1.02); }
+.hero-overlay{position:absolute;inset:0;background:
+  radial-gradient(circle at 16% 18%, rgba(107,200,196,0.22), transparent 28rem),
+  radial-gradient(circle at 90% 12%, rgba(200,24,124,0.18), transparent 30rem),
+  linear-gradient(to bottom,rgba(47,33,86,0.18) 0%,rgba(11,13,18,0.72) 54%,rgba(11,13,18,0.98) 100%)}
+.hero-content{position:relative;z-index:2;padding:2.5rem 2.5rem 2rem}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--is-teal);margin-bottom:1.5rem; text-shadow: 0 0 10px rgba(107,200,196,0.3);}
+.hero-logo{display:block;width:clamp(360px,74vw,1120px);max-width:100%;height:auto;margin-bottom:1.35rem;filter:drop-shadow(0 18px 34px rgba(0,0,0,0.5))}
+.hero-tagline{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(237,233,225,0.6);margin-bottom:1.5rem}
+.hero-premise{font-size:1.15rem;font-style:italic;color:rgba(237,233,225,0.8);max-width:560px;border-left:3px solid var(--is-magenta);padding-left:1.25rem;line-height:1.6}
+.leda-badge{display:inline-flex;align-items:center;gap:8px;margin-top:1.5rem;background:rgba(255,255,255,0.04);backdrop-filter: blur(8px);border:1px solid var(--border);padding:6px 14px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text); transition: background 0.3s;}
+.leda-badge a{color:var(--is-teal);text-decoration:none}
+.leda-badge:hover { background: rgba(255,255,255,0.08); }
+.leda-dot{width:6px;height:6px;border-radius:50%;background:var(--is-yellow); box-shadow: 0 0 8px var(--is-yellow);}
+
+/* NAV */
+.session-nav{display:flex;gap:0;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;background:rgba(18, 21, 28, 0.7); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 10;}
+.session-nav::-webkit-scrollbar{display:none}
+.nav-btn{flex-shrink:0;padding:1rem 1.5rem;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:color 0.3s, border-color 0.3s, background 0.3s;white-space:nowrap}
+.nav-btn:hover{color:var(--text); background: rgba(255,255,255,0.02);}
+.nav-btn.active{color:var(--text)}
+.nav-btn[data-s="0"].active{border-color:var(--is-teal); background: linear-gradient(to top, rgba(107,200,196,0.1), transparent);}
+.nav-btn[data-s="1"].active{border-color:var(--is-teal); background: linear-gradient(to top, rgba(107,200,196,0.1), transparent);}
+.nav-btn[data-s="2"].active{border-color:var(--is-yellow); background: linear-gradient(to top, rgba(255,214,48,0.1), transparent);}
+.nav-btn[data-s="3"].active{border-color:var(--is-magenta); background: linear-gradient(to top, rgba(200,24,124,0.1), transparent);}
+.nav-btn[data-s="4"].active{border-color:var(--is-orange); background: linear-gradient(to top, rgba(241,107,54,0.1), transparent);}
+.nav-btn[data-s="5"].active{border-color:var(--is-teal); background: linear-gradient(to top, rgba(107,200,196,0.1), transparent);}
+.nav-btn[data-s="6"].active{border-color:var(--is-yellow); background: linear-gradient(to top, rgba(255,214,48,0.1), transparent);}
+.nav-btn[data-s="7"].active{border-color:var(--is-orange); background: linear-gradient(to top, rgba(241,107,54,0.1), transparent);}
+.nav-btn[data-s="8"].active{border-color:var(--is-teal); background: linear-gradient(to top, rgba(107,200,196,0.1), transparent);}
+
+/* PANELS */
+.panel{display:none;animation:fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;}
+.panel.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTION HERO */
+.sec-hero{padding:2.5rem 2.5rem 2rem;border-bottom:1px solid var(--border); position: relative;}
+.sec-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:1rem; font-weight: 700;}
+.p0 .sec-tag{background:rgba(107,200,196,0.15);color:var(--is-teal); box-shadow: 0 0 10px rgba(107,200,196,0.1);}
+.p1 .sec-tag{background:rgba(255,214,48,0.15);color:var(--is-yellow); box-shadow: 0 0 10px rgba(255,214,48,0.1);}
+.p2 .sec-tag{background:rgba(200,24,124,0.15);color:var(--is-magenta); box-shadow: 0 0 10px rgba(200,24,124,0.1);}
+.p3 .sec-tag{background:rgba(241,107,54,0.15);color:var(--is-orange); box-shadow: 0 0 10px rgba(241,107,54,0.1);}
+.p4 .sec-tag{background:rgba(107,200,196,0.15);color:var(--is-teal); box-shadow: 0 0 10px rgba(107,200,196,0.1);}
+.sec-title{font-family:'Alisha', Helvetica, sans-serif;font-size:clamp(2.4rem,5.8vw,4.8rem);font-weight:400;line-height:.98;max-width:760px;margin-bottom:1.25rem; letter-spacing: 0;}
+.sec-lede{font-size:1.1rem;font-style:italic;color:rgba(237,233,225,0.75);max-width:600px;border-left:3px solid;padding-left:1.25rem;line-height:1.6}
+.p0 .sec-lede{border-color:var(--is-teal)}
+.p1 .sec-lede{border-color:var(--is-yellow)}
+.p2 .sec-lede{border-color:var(--is-magenta)}
+.p3 .sec-lede{border-color:var(--is-orange)}
+.p4 .sec-lede{border-color:var(--is-teal)}
+
+/* PREMIUM GLASSMORPHIC SHOWCASE */
+.glass-showcase {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/2;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(18, 21, 28, 0.8);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+.glass-showcase:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 20px rgba(107,200,196,0.15);
+}
+.glass-bg {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+  filter: blur(40px) brightness(0.4) saturate(1.8);
+  z-index: 1;
+  opacity: 0.8;
+}
+.glass-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.glass-showcase:hover .glass-img {
+  transform: scale(1.03);
+}
+
+.panel > [id^="photo"]{
+  width:min(100%,560px);
+  margin:0 auto;
+  padding:0 2.5rem;
+}
+.panel > [id^="photo"] .glass-showcase{
+  aspect-ratio:1/1;
+  margin-bottom:1rem;
+}
+.panel > [id^="photo"] .photo-stack{gap:1rem}
+.panel > [id^="photo"] .photo-grid-pair{gap:1rem}
+.panel > [id^="photo"] + .photo-caption{
+  max-width:560px;
+  margin:0 auto;
+  padding-left:2.5rem;
+  padding-right:2.5rem;
+}
+
+.photo-stack{display:flex;flex-direction:column;gap:1.5rem; overflow: hidden;}
+.photo-grid-pair{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem; overflow: hidden;}
+.photo-grid-pair .glass-showcase { aspect-ratio: 1/1; margin-bottom: 0; }
+.hero-img { object-position: center 25%; }
+
+.photo-caption{padding:0.75rem 2.5rem;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
+
+/* BODY */
+.body{max-width:680px;margin:0 auto;padding:2.5rem 2.5rem 1rem}
+.body.tight-top{padding-top:0.5rem}
+.body p{margin-bottom:1.5rem;color:rgba(237,233,225,0.85); font-size: 1.05rem;}
+.pull{margin:2.5rem 0;padding:1.5rem 2rem;background:var(--surface);border-left:4px solid;border-radius:0 8px 8px 0;font-size:1.25rem;font-style:italic;line-height:1.55;color:var(--text); box-shadow: 0 4px 20px rgba(0,0,0,0.2);}
+.p0 .pull{border-color:var(--is-teal)}
+.p1 .pull{border-color:var(--is-yellow)}
+.p2 .pull{border-color:var(--is-magenta)}
+.p3 .pull{border-color:var(--is-orange)}
+.p4 .pull{border-color:var(--is-teal)}
+.pull cite{display:block;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);margin-top:0.8rem;text-transform:uppercase; font-weight: 700;}
+
+/* DESTIN BOX */
+.destin-box{background:linear-gradient(145deg, var(--surface2), var(--surface));border:1px solid var(--border);border-radius:8px;padding:1.5rem 2rem;margin:2.5rem 0; box-shadow: 0 8px 30px rgba(0,0,0,0.15);}
+.destin-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem; font-weight: 700;}
+.p0 .destin-label{color:var(--is-teal)}
+.p1 .destin-label{color:var(--is-yellow)}
+.p2 .destin-label{color:var(--is-magenta)}
+.p3 .destin-label{color:var(--is-orange)}
+.p4 .destin-label{color:var(--is-teal)}
+.destin-text{font-size:1rem;color:rgba(237,233,225,0.8);line-height:1.65;font-style:italic}
+
+/* FRAMEWORK */
+.framework{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1.5rem 2rem;margin:2.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.1);}
+.fw-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem; font-weight: 700;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.fw-item{display:flex;gap:0.75rem;align-items:flex-start; padding: 1rem; border-radius: 6px; transition: background 0.3s;}
+.fw-item:hover { background: rgba(255,255,255,0.02); }
+.fw-letter{font-size:1.2rem;font-weight:700;line-height:1;margin-top:2px;flex-shrink:0;width:24px}
+.p0 .fw-letter,.p4 .fw-letter{color:var(--is-teal); text-shadow: 0 0 8px rgba(107,200,196,0.3);}
+.p1 .fw-letter{color:var(--is-yellow); text-shadow: 0 0 8px rgba(255,214,48,0.3);}
+.p2 .fw-letter{color:var(--is-magenta); text-shadow: 0 0 8px rgba(200,24,124,0.3);}
+.p3 .fw-letter{color:var(--is-orange); text-shadow: 0 0 8px rgba(241,107,54,0.3);}
+.fw-text{font-size:0.9rem;color:rgba(237,233,225,0.7);line-height:1.55}
+.fw-text strong{display:block;color:var(--text);font-size:1rem; margin-bottom: 0.2rem;}
+
+/* DEEP EDITORIAL MODULES */
+.editorial-deep{max-width:980px;margin:0 auto;padding:0.5rem 2.5rem 3rem}
+.deep-block{margin:2rem 0}
+.deep-kicker{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:0.7rem}
+.deep-title{font-family:'Alisha', Helvetica, sans-serif;font-size:clamp(1.9rem,3.7vw,3rem);font-weight:400;line-height:1.05;margin-bottom:0.8rem}
+.deep-copy{max-width:760px;color:rgba(237,233,225,0.78);font-size:1rem;line-height:1.7}
+.metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 2.5rem}
+.metric-card{min-height:150px;background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--border);border-radius:8px;padding:1.2rem;box-shadow:0 8px 28px rgba(0,0,0,0.18)}
+.metric-value{font-family:'JetBrains Mono',monospace;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1;margin-bottom:0.8rem}
+.metric-label{font-size:0.9rem;line-height:1.55;color:rgba(237,233,225,0.72)}
+.stage-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 2.5rem}
+.stage-card{background:rgba(255,255,255,0.035);border:1px solid var(--border);border-radius:8px;padding:1.15rem 1.25rem}
+.stage-card strong{display:block;color:var(--text);font-size:1rem;margin-bottom:0.35rem}
+.stage-card p{color:rgba(237,233,225,0.74);font-size:0.92rem;line-height:1.6}
+.idea-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
+.idea-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.1rem;min-height:150px}
+.idea-icon{font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;margin-bottom:0.7rem}
+.idea-card strong{display:block;color:var(--text);font-size:0.98rem;margin-bottom:0.35rem}
+.idea-card p{color:rgba(237,233,225,0.72);font-size:0.88rem;line-height:1.55}
+.deep-list{display:grid;gap:0.85rem;margin:1.25rem 0 2.25rem}
+.deep-step{display:grid;grid-template-columns:56px 1fr;gap:1rem;align-items:start;background:rgba(255,255,255,0.032);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.step-num{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.05rem}
+.deep-step strong{display:block;color:var(--text);margin-bottom:0.25rem}
+.deep-step p{color:rgba(237,233,225,0.72);font-size:0.92rem;line-height:1.55}
+.p0 .metric-value,.p0 .idea-icon,.p0 .step-num{color:var(--is-teal)}
+.p1 .metric-value,.p1 .idea-icon,.p1 .step-num{color:var(--is-yellow)}
+.p2 .metric-value,.p2 .idea-icon,.p2 .step-num{color:var(--is-magenta)}
+.p3 .metric-value,.p3 .idea-icon,.p3 .step-num{color:var(--is-orange)}
+.p4 .metric-value,.p4 .idea-icon,.p4 .step-num{color:var(--is-teal)}
+
+/* WINNERS */
+.winners-strip{padding:0 0 2rem}
+.winner-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin:1.5rem 2.5rem; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;}
+.winner-card.secondary{border-color:rgba(107,200,196,0.3)}
+.winner-card.flush-top{margin-top:0.5rem}
+.winner-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.15); }
+.wc-place{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--is-yellow);margin-bottom:0.5rem; font-weight: 700; text-shadow: 0 0 8px rgba(255,214,48,0.3);}
+.winner-card.secondary .wc-place{color:var(--is-teal);text-shadow:0 0 8px rgba(107,200,196,0.3)}
+.wc-name{font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.35rem; letter-spacing: -0.01em;}
+.wc-amount{font-size:1.2rem;color:var(--is-teal);font-family:'JetBrains Mono',monospace;margin-bottom:0.75rem; font-weight: 700;}
+.winner-card.secondary .wc-amount{color:rgba(237,233,225,0.62)}
+.wc-quote{font-size:0.95rem;font-style:italic;color:rgba(237,233,225,0.7);line-height:1.6}
+
+/* SPEAKERS */
+.speakers-sec{padding:2rem 2.5rem 3rem;border-top:1px solid var(--border)}
+.speakers-sec.compact{padding-top:1.5rem}
+.sp-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text);margin-bottom:1.5rem; font-weight: 700;}
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;max-width:680px}
+.sp-card{background:linear-gradient(to bottom, var(--surface), var(--surface2));border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.2rem;transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s; cursor: pointer;}
+.sp-card:hover{border-color:rgba(255,255,255,0.2); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.2);}
+.sp-grid:has(.sp-card:hover) .sp-card:not(:hover) { opacity: 0.6; transform: scale(0.98); }
+.sp-name{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.3rem}
+.sp-role{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--muted);line-height:1.5}
+.mod-badge{display:inline-block;margin-top:0.5rem;font-size:10px;font-family:'JetBrains Mono',monospace;letter-spacing:0.12em;text-transform:uppercase;padding:3px 8px;border-radius:4px; font-weight: 700;}
+.p0 .mod-badge,.p4 .mod-badge{background:rgba(107,200,196,0.15);color:var(--is-teal)}
+.p1 .mod-badge{background:rgba(255,214,48,0.15);color:var(--is-yellow)}
+.p2 .mod-badge{background:rgba(200,24,124,0.15);color:var(--is-magenta)}
+.p3 .mod-badge{background:rgba(241,107,54,0.15);color:var(--is-orange)}
+
+/* FOOTER */
+.site-footer{padding:2rem 2.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem; background: var(--bg);}
+.footer-left{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+.footer-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--is-teal);text-decoration:none;letter-spacing:0.08em; transition: color 0.3s;}
+.footer-link:hover{color:var(--is-magenta)}
+
+@media(max-width:768px){
+  .fw-grid{grid-template-columns:1fr}
+  .metric-grid,.stage-stack,.idea-grid{grid-template-columns:1fr}
+  .deep-step{grid-template-columns:42px 1fr}
+  .editorial-deep{padding:0.5rem 1.5rem 2.5rem}
+  .photo-portrait-pair{gap: 2px;}
+  .photo-check-pair{gap: 2px;}
+}
+@media(max-width:520px){
+  .hero-title{font-size: 2.2rem;}
+  .sec-title{font-size: 1.8rem;}
+  .body{padding: 1.5rem;}
+  .sp-grid{grid-template-columns:1fr}
+  .photo-strip.three{grid-template-columns:1fr}
+  .photo-strip.three img:first-child{height:200px}
+  .photo-strip img{height:180px}
+  .winners-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<script>
+const IS_2026_372 = 'images/hi_res_1.jpg';
+const Building_an_AI_Native_Culture_for_the_Agentic_Future = 'images/hi_res_2.jpg';
+const IS_2026_452 = 'images/hi_res_3.jpg';
+const IS_2026_483 = 'images/hi_res_4.jpg';
+const IS_2026_484 = 'images/hi_res_5.jpg';
+const IS_2026_415 = 'images/hi_res_1.jpg'; // Reused as an example
+const Tech_Tank_2026_1 = 'images/hi_res_2.jpg'; // Reused as an example
+const IS_2026_487 = 'images/hi_res_3.jpg'; // Reused as an example
+const IS_2026_481 = 'images/hi_res_4.jpg'; // Reused as an example
+const MINDSET_1 = 'images/mindset_1.jpg';
+const MINDSET_2 = 'images/mindset_2.jpg';
+const MEETUPS_1 = 'images/meetups_1.jpg';
+const TECHTANK_1 = 'images/techtank_1.jpg';
+const TECHTANK_2 = 'images/techtank_2.jpg';
+const TECHTANK_3 = 'images/techtank_3.jpg';
+const TECHTANK_4 = 'images/techtank_4.jpg';
+const TECHTANK_5 = 'images/techtank_5.jpg';
+const HERO_APPLAUSE = 'images/hero-applause.jpeg';
+const JEREMIAH_OWYANG = 'images/jeremiah-owyang-keynote.jpeg';
+const INVESTOR_PANEL_WIDE = 'images/investor-panel-wide.jpeg';
+const INVESTOR_PANEL_CLOSE_1 = 'images/investor-panel-close-1.jpeg';
+const INVESTOR_PANEL_CLOSE_2 = 'images/investor-panel-close-2.jpeg';
+const VLAD_CAZACU = 'images/vlad-cazacu-flowlie.jpeg';
+const MANDI_MITCHELL = 'images/mandi-mitchell-leda.jpeg';
+const DESTIN_OM_TEAM = 'images/destin-opportunity-machine-team.jpeg';
+const NETWORK_1 = 'images/network_1.jpg';
+const NETWORK_2 = 'images/network_2.jpg';
+const NETWORK_3 = 'images/network_3.jpg';
+const WINNER_1 = 'images/winner_1.jpg';
+const WINNER_2 = 'images/winner_2.jpg';
+</script>
+
+<!-- HERO using crowd photo -->
+<div class="hero">
+  <img class="hero-img" id="heroImg" alt="Innovate South 2026 crowd">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Lafayette, Louisiana · April 2026</div>
+    <img src="images/innovate-south-logo-top-color.png" class="hero-logo" alt="Innovate South">
+    <p class="hero-premise">Louisiana already has the founders, the talent, the investors, the AI signal, and the ideas. Innovate South is how the ecosystem sees itself clearly — and takes the next step together.</p>
+    <div class="leda-badge"><div class="leda-dot"></div>Opportunity Machine &nbsp;·&nbsp; <a href="https://www.innovatesouth.org/" target="_blank">innovatesouth.org</a></div>
+  </div>
+</div>
+
+<div id="tab-article">
+
+<nav class="session-nav">
+  <button class="nav-btn active" data-s="0">Opening Note</button>
+  <button class="nav-btn" data-s="1">AI-Native Culture</button>
+  <button class="nav-btn" data-s="2">Investor Panel</button>
+  <button class="nav-btn" data-s="3">Goldilocks Round</button>
+  <button class="nav-btn" data-s="4">The Network Effect</button>
+  <button class="nav-btn" data-s="5">High Tech, High Touch</button>
+  <button class="nav-btn" data-s="6">Mindset in Tech</button>
+  <button class="nav-btn" data-s="7">Tech Meetups</button>
+  <button class="nav-btn" data-s="8">Tech Tank 2026</button>
+</nav>
+
+<!-- ════════════════════════════════
+     PANEL 0: OPENING NOTE
+════════════════════════════════ -->
+<div class="panel p0 active">
+  <div class="sec-hero">
+    <div class="sec-tag">Opening Note · Founder-First Culture</div>
+    <h2 class="sec-title">Why Innovate South Exists</h2>
+    <p class="sec-lede">Before the keynotes, panels, and pitch prizes, Innovate South made a simple argument: Lafayette already has the people, companies, capital, and culture to build. The work is helping the ecosystem see itself clearly and move together.</p>
+  </div>
+
+  <div id="photoIntro"></div>
+  <div class="photo-caption">Mandi Mitchell, LEDA President &amp; CEO · Destin Ortego and the Opportunity Machine team · Innovate South 2026</div>
+
+  <div class="body">
+    <p><strong>Mandi Mitchell</strong>, President &amp; CEO of <strong>LEDA</strong>, placed Innovate South inside Lafayette's larger economic-development mission. Her remarks connected the conference to a region with a long entrepreneurial habit: builders, risk-takers, university talent, industry knowledge, and a community willing to support companies before they become obvious.</p>
+
+    <p><strong>Destin Ortego</strong> framed the room from the founder side. Tech Tank was not built only for investors or prize checks. It was designed so founders could ask the room for specific help: customers, introductions, operational expertise, mentors, and the kind of community signal that keeps momentum alive after demo day.</p>
+
+    <div class="pull">The point was not just to watch founders pitch. It was to make sure founders could feel the community behind them.<cite>— Destin Ortego, paraphrased from Tech Tank opening remarks</cite></div>
+
+    <div class="framework">
+      <div class="fw-label">Recap Lens</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">A</div><div class="fw-text"><strong>Economic development starts with founders</strong>LEDA's role gives the event civic weight: stronger startups mean stronger companies, jobs, and industry depth for Lafayette.</div></div>
+        <div class="fw-item"><div class="fw-letter">B</div><div class="fw-text"><strong>The room is part of the infrastructure</strong>Opportunity Machine built Innovate South as a place where founders can access more than attention: they can access people.</div></div>
+        <div class="fw-item"><div class="fw-letter">C</div><div class="fw-text"><strong>Non-dilutive capital protects momentum</strong>Tech Tank's prize money matters because it helps early companies move without immediately trading away ownership.</div></div>
+        <div class="fw-item"><div class="fw-letter">D</div><div class="fw-text"><strong>Innovation has an accent</strong>The conference's promise is not to copy another market. It is to build from Acadiana's own trust, talent, and practical industry base.</div></div>
+      </div>
+    </div>
+
+    <p>This recap starts there because the sessions only make sense inside that frame. Jeremiah Owyang's AI-native keynote, the investor panel, Vlad Cazacu's fundraising math, the relationship-building sessions, and Tech Tank all pointed back to the same regional thesis: founder-first culture is economic development when the ecosystem shows up with intent.</p>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Opening Frame</div>
+      <h3 class="deep-title">A Conference Built As Founder Infrastructure</h3>
+      <p class="deep-copy">Innovate South 2026 was not just a conference calendar stitched together with speakers. It functioned like an ecosystem operating room: founders brought real asks, investors brought pattern recognition, mentors brought hard-won context, and local institutions brought the mandate to turn momentum into durable economic activity.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">Since day one</div><div class="metric-label">LEDA's partnership helped position Innovate South as part of Lafayette's long-term innovation and business-growth strategy.</div></div>
+      <div class="metric-card"><div class="metric-value">$25K</div><div class="metric-label">Tech Tank awarded non-dilutive capital that gave founders runway without immediately giving up equity.</div></div>
+      <div class="metric-card"><div class="metric-value">1 room</div><div class="metric-label">The repeated ask: put founders in front of the people who can open doors, validate demand, and help them keep building.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">What Mandi And Destin Set Up</div>
+      <h3 class="deep-title">The Ecosystem Was The Main Character</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Founder support is economic development.</strong><p>When LEDA talks about innovation, it is not abstract branding. It is about helping Lafayette companies start, grow, hire, and stay rooted in the region.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Community creates founder confidence.</strong><p>Destin's Tech Tank framing asked attendees to be useful, not passive: make the intro, share the customer lead, name the skill set, and help the next company move.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>The culture has to be local.</strong><p>Innovate South's edge is Acadiana's mix of practical industry knowledge, trust networks, UL talent, and a long habit of entrepreneurial risk-taking.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Capital should preserve momentum.</strong><p>The event celebrated prize funding and investor relationships, but kept the founder's path at the center: runway, validation, leverage, and ownership.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>The recap is a map.</strong><p>Each tab that follows shows one layer of the system: AI culture, fundraising, relationships, talent, community, and public proof through Tech Tank.</p></div></div>
+      </div>
+    </div>
+
+    <div class="stage-stack">
+      <div class="stage-card"><strong>Mandi Mitchell / LEDA</strong><p>Set the civic frame: innovation is tied to business growth, industry resilience, and Lafayette's capacity to compete by supporting entrepreneurs.</p></div>
+      <div class="stage-card"><strong>Destin Ortego / Opportunity Machine</strong><p>Set the founder frame: the audience was not just watching. The room was an active resource for founders who needed connections, talent, and market access.</p></div>
+      <div class="stage-card"><strong>Founder-First Culture</strong><p>The conference carried a clear thesis across sessions: ecosystems grow when founders are surrounded by capital, customers, mentors, and institutions that move in the same direction.</p></div>
+      <div class="stage-card"><strong>What Comes Next</strong><p>The following tabs move through the conference's strongest signals, from AI-native companies to the pitch-stage proof of Mirror Labs and XR MediX.</p></div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Opening Voices</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Mandi Mitchell</div><div class="sp-role">President &amp; CEO<br>LEDA</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Host</span></div></div>
+      <div class="sp-card"><div class="sp-name">Opportunity Machine Team</div><div class="sp-role">Founder Support<br>Innovate South 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 1: JEREMIAH OWYANG
+════════════════════════════════ -->
+<div class="panel p0">
+  <div class="sec-hero">
+    <div class="sec-tag">Keynote · AI-Native Culture</div>
+    <h2 class="sec-title">Jeremiah Owyang: Building an AI-Native Culture</h2>
+    <p class="sec-lede">Owyang's keynote pushed the room past AI as a tool demo and into AI as an operating question: how teams build, how customers adopt, and why human networks still matter in an agentic market.</p>
+  </div>
+
+  <div id="photoJeremiah"></div>
+  <div class="photo-caption">Jeremiah Owyang · General Partner, Blitzscaling Ventures · AI-native culture keynote</div>
+
+  <div class="body">
+    <p><strong>Jeremiah Owyang</strong>, General Partner at <strong>Blitzscaling Ventures</strong>, framed the session around culture first. The companies he described are building constantly, using AI agents inside small teams, and expecting even non-technical founders to work closer to product creation.</p>
+
+    <p>He also argued that adoption will not happen all at once. In the near term, some of the strongest use cases stay behind the scenes, especially in customer care and natural-language workflows, while broader consumer comfort arrives more slowly.</p>
+
+    <div class="pull">AI-native teams move faster, but network effects, community strategy, and real-world relationships still create advantage.<cite>— Jeremiah Owyang, paraphrased from keynote</cite></div>
+
+    <div class="framework">
+      <div class="fw-label">Keynote Signals</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">A</div><div class="fw-text"><strong>Culture is the operating layer</strong>The keynote was explicitly about how organizations work, not just which models or tools they use.</div></div>
+        <div class="fw-item"><div class="fw-letter">B</div><div class="fw-text"><strong>Build continuously</strong>Owyang described AI-native teams treating each week like a hackathon and testing constantly.</div></div>
+        <div class="fw-item"><div class="fw-letter">C</div><div class="fw-text"><strong>Deployment still matters</strong>For B2B startups, forward-deployed engineers and customer rollout support remain part of the job.</div></div>
+        <div class="fw-item"><div class="fw-letter">D</div><div class="fw-text"><strong>Human connection persists</strong>Network effects, conferences, and local community are still hard to replicate.</div></div>
+      </div>
+    </div>
+
+    <p>The keynote's most grounded point was also its most useful one for this recap: AI may compress the build cycle, but trust, rollout discipline, and real relationships still shape who wins.</p>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">The Agentic Future Is Already Here</h3>
+      <p class="deep-copy">Owyang delivered the conference's marquee keynote as a dense operating memo for founders, operators, and ecosystem builders. His central argument: the race is no longer about sprinkling AI features onto existing companies. It is about building AI-native cultures where human judgment and machine execution are designed into every workflow.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">10x</div><div class="metric-label">Revenue-per-employee advantage Owyang used to frame the gap between AI-native companies and traditional operating models.</div></div>
+      <div class="metric-card"><div class="metric-value">5</div><div class="metric-label">AI culture types for diagnosing whether a company is resisting, experimenting, integrating, leading, or fully native.</div></div>
+      <div class="metric-card"><div class="metric-value">0</div><div class="metric-label">The technical moat if every founder can access similar models. Culture, relationships, and speed become the harder edge.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">Five AI Cultures</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>AI Resistant</strong><p>Avoiding or blocking adoption, usually because the organization has not created trust, policy, or a safe place to learn.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>AI Aware</strong><p>Employees experiment with tools, but gains remain individual and scattered instead of becoming operating leverage.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>AI Integrated</strong><p>AI is embedded in key workflows, teams are trained, and outcomes can be measured beyond novelty.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>AI-First</strong><p>New initiatives begin with the question of what AI enables before hiring, tooling, or process design are locked in.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>AI-Native</strong><p>The company could not exist without AI. Human roles, agents, and workflows are designed together from the start.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">What He Pressed Into the Room</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Culture over code</strong><p>The durable moat is no longer only technical. It is how fast a team learns, deploys, and adapts with AI.</p></div>
+        <div class="stage-card"><strong>RPE as a warning light</strong><p>Revenue per employee is becoming a proxy for whether a company is merely using AI or structurally built around it.</p></div>
+        <div class="stage-card"><strong>Agents change the workflow</strong><p>Copilots assist. Agents act. That distinction forces founders to rethink handoffs, permissions, and accountability.</p></div>
+        <div class="stage-card"><strong>Lafayette has a network story</strong><p>Even inside an AI keynote, Owyang kept returning to universities, investors, community, and relationships as ecosystem infrastructure.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">RPE</div><strong>The 10x Thesis</strong><p>AI-native companies can redefine what a lean startup looks like by producing more with dramatically smaller teams.</p></div>
+        <div class="idea-card"><div class="idea-icon">OPS</div><strong>The Agentic Stack</strong><p>Agents require orchestration, permissions, data layers, marketplaces, and management discipline.</p></div>
+        <div class="idea-card"><div class="idea-icon">MOAT</div><strong>Culture as Advantage</strong><p>If models are broadly available, the differentiator is the culture that can absorb and use them fastest.</p></div>
+        <div class="idea-card"><div class="idea-icon">DIAG</div><strong>Culture Diagnostic</strong><p>The five-cultures model gave founders a practical way to locate where they actually stand.</p></div>
+        <div class="idea-card"><div class="idea-icon">CASE</div><strong>AI-Native Examples</strong><p>Owyang pointed to emerging companies as proof that agentic leverage is already showing up in early metrics.</p></div>
+        <div class="idea-card"><div class="idea-icon">Q+A</div><strong>Gulf South Reality Check</strong><p>The audience pressed the framework against local founder, workforce, and ecosystem realities.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Featured Speaker</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Jeremiah Owyang</div><div class="sp-role">General Partner<br>Blitzscaling Ventures</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Host</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 1: INVESTOR PANEL
+════════════════════════════════ -->
+<div class="panel p1">
+  <div class="sec-hero">
+    <div class="sec-tag">Capital · Investor Panel</div>
+    <h2 class="sec-title">Decoding the Term Sheet: Local and National Capital</h2>
+    <p class="sec-lede">The panel did not treat capital as one category. It separated first-check venture, broader early-stage investing, and Louisiana-focused growth equity into three different founder realities.</p>
+  </div>
+
+  <div id="photoInvestorPanel"></div>
+  <div class="photo-caption">Investor panel · Local versus national capital · Louisiana, Gulf South, and flyover-state perspectives</div>
+
+  <div class="body">
+    <p><strong>Blake J. Stanfill</strong> described the New Orleans Startup Fund as the early layer: "friends and family that we don't have," typically writing the first check and helping founders get ready for institutional capital. <strong>Rohit Gupta</strong> spoke from an early-stage venture lens that looks beyond the coasts. <strong>Jared Quoyeser</strong> brought a different frame entirely, focusing on growth and buyout capital that keeps companies, jobs, and wealth in Louisiana.</p>
+
+    <div class="pull">"Our job is to de risk the deal for other Louisiana investors or future investors."<cite>— Blake J. Stanfill, New Orleans Startup Fund</cite></div>
+
+    <p>The recurring advice was procedural. Founders should know what kind of capital fits their company, invest in their network, pursue warm introductions, and remember that investor interest is not the same as closed money.</p>
+
+    <div class="framework">
+      <div class="fw-label">Investor Panel Signals</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">B</div><div class="fw-text"><strong>Blake Stanfill</strong>First-check capital is meant to prepare Louisiana founders for the next institutional step, not replace it.</div></div>
+        <div class="fw-item"><div class="fw-letter">R</div><div class="fw-text"><strong>Rohit Gupta</strong>Founder fit matters, and money is not real until it actually closes.</div></div>
+        <div class="fw-item"><div class="fw-letter">J</div><div class="fw-text"><strong>Jared Quoyeser</strong>Growth capital looks for operational control, scalable economics, and reasons to keep the company rooted in Louisiana.</div></div>
+        <div class="fw-item"><div class="fw-letter">→</div><div class="fw-text"><strong>The takeaway</strong>The right capital depends on stage, structure, and who can help the company reach its next milestone.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">Capital Is Not One Thing</h3>
+      <p class="deep-copy">The panel's most useful move was taxonomy. Blake Stanfill, Rohit Gupta, and Jared Quoyeser each described a different capital lane, which gave founders a sharper question than "How do I raise money?" The better question is: what kind of capital matches the company I am actually building?</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">$100K</div><div class="metric-label">Upper-end first-check size Stanfill described for the New Orleans Startup Fund, designed to help founders de-risk the next round.</div></div>
+      <div class="metric-card"><div class="metric-value">~200</div><div class="metric-label">Companies the fund may see in a year, making clarity, referrals, and preparation matter at the top of the funnel.</div></div>
+      <div class="metric-card"><div class="metric-value">3</div><div class="metric-label">Capital lenses on stage: first-check startup capital, early-stage venture, and Louisiana-focused growth equity.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">The Founder Capital Fit Test</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Is it venture-backable?</strong><p>Blake's frame started with scalability: a meaningful Louisiana presence, but a company that can grow nationally and beyond.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Is the founder-market fit real?</strong><p>Rohit emphasized the person behind the company, including whether the founder has a credible reason to win in the market.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Do the numbers connect?</strong><p>Jared pushed founders toward operational readiness: financials that tie to reality, a data room with substance, and a CEO who knows the business.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Is the introduction warm enough?</strong><p>The panel treated warm intros as reputation transfer. A good intro makes the investor's job easier and protects the connector's credibility.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>What happens after the meeting?</strong><p>Investor relationships are cultivated through updates, follow-through, and asking who else belongs in the conversation.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">What the Investors Actually Said to Do</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Blake Stanfill</strong><p>Use first-check capital to reduce risk for the next investor. The early check should make the company easier to finance, not just extend runway.</p></div>
+        <div class="stage-card"><strong>Rohit Gupta</strong><p>Research the right partner, earn the warm intro, and remember that investor interest is not real until the money is actually in the account.</p></div>
+        <div class="stage-card"><strong>Jared Quoyeser</strong><p>Growth capital wants operating discipline: clean data, clear deployment of capital, and a company that can scale without losing control.</p></div>
+        <div class="stage-card"><strong>The ecosystem lesson</strong><p>Opportunity Machine, Idea Village, Ochsner Ventures, Nexus, and similar nodes matter because pre-vetted community context changes the conversation.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">FIT</div><strong>Capital Type</strong><p>Not every company should raise VC. Stage, growth rate, and exit path determine fit.</p></div>
+        <div class="idea-card"><div class="idea-icon">WARM</div><strong>Introductions</strong><p>Cold outreach is weak compared with a thoughtful, well-earned referral from a trusted operator or founder.</p></div>
+        <div class="idea-card"><div class="idea-icon">ROOM</div><strong>Data Room</strong><p>Financials, strategy, and operational evidence need to withstand investor diligence.</p></div>
+        <div class="idea-card"><div class="idea-icon">TEAM</div><strong>Founder Quality</strong><p>Investors were explicit that they are underwriting people, judgment, and coachability, not just products.</p></div>
+        <div class="idea-card"><div class="idea-icon">LA</div><strong>Louisiana Advantage</strong><p>The shared priority was building and keeping wealth, jobs, and scalable companies in the region.</p></div>
+        <div class="idea-card"><div class="idea-icon">NEXT</div><strong>Follow-On Path</strong><p>The right first check should make the next investor easier to secure.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Investor Panel</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Blake J. Stanfill</div><div class="sp-role">Chief Investment Officer<br>New Orleans Startup Fund</div></div>
+      <div class="sp-card"><div class="sp-name">Rohit Gupta</div><div class="sp-role">Managing Director<br>Future Communities Capital</div></div>
+      <div class="sp-card"><div class="sp-name">Jared Quoyeser</div><div class="sp-role">Co-Founder &amp; Managing Partner<br>Louisiana Impact Fund</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Moderator</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 2: VLAD CAZACU
+════════════════════════════════ -->
+<div class="panel p2">
+  <div class="sec-hero">
+    <div class="sec-tag">Keynote · Fundraising Mechanics</div>
+    <h2 class="sec-title">Vlad Cazacu: The Goldilocks Round</h2>
+    <p class="sec-lede">Cazacu treated fundraising as financial architecture, not founder theater: the amount you raise, the milestone it must reach, and the ownership you give up all shape what happens next.</p>
+  </div>
+
+  <div id="photoVlad"></div>
+  <div class="photo-caption">Vlad Cazacu · CEO, Flowlie Technologies · The Goldilocks Round keynote</div>
+
+  <div class="body">
+    <p><strong>Vlad Cazacu</strong>, CEO of <strong>Flowlie Technologies</strong>, was careful to narrow his talk to institutional venture capital. His point was that VC is a specific asset class with LP mandates, return expectations, and a defined timetable, not just a generic source of startup cash.</p>
+
+    <div class="pull">"Dilution is cumulative."<cite>— Vlad Cazacu, Flowlie Technologies</cite></div>
+
+    <p>That logic drove the rest of the keynote. Founders should raise toward a credible next milestone, watch ownership in aggregate rather than round by round, and run fundraising like a dense sales process instead of a loose chain of meetings.</p>
+
+    <div class="framework">
+      <div class="fw-label">Goldilocks Round Rules</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">1</div><div class="fw-text"><strong>Know the mandate</strong>Institutional VC comes with LP obligations and a narrower definition of fit.</div></div>
+        <div class="fw-item"><div class="fw-letter">2</div><div class="fw-text"><strong>Raise to a milestone</strong>The round size should be tied to what the company must prove next.</div></div>
+        <div class="fw-item"><div class="fw-letter">3</div><div class="fw-text"><strong>Watch cumulative dilution</strong>Early mistakes compound, especially by the time a company reaches Series A.</div></div>
+        <div class="fw-item"><div class="fw-letter">4</div><div class="fw-text"><strong>Run a real process</strong>Calendar density, warm outreach, and top-of-funnel discipline matter in fundraising too.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">Raise for the Next Station, Not the Current Label</h3>
+      <p class="deep-copy">Cazacu's keynote was a founder finance clinic. He separated institutional venture from other money, then translated that into a practical planning model: the round exists to reach the next financing milestone with enough proof, runway, and ownership left to keep going.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">18-24</div><div class="metric-label">Months of runway Cazacu recommended founders now plan around as markets demand more proof and more buffer.</div></div>
+      <div class="metric-card"><div class="metric-value">4-5</div><div class="metric-label">Months a raise can take once a founder is actively in market, before counting the preparation that makes it work.</div></div>
+      <div class="metric-card"><div class="metric-value">20-30%</div><div class="metric-label">Budget buffer he encouraged founders to build in so optimistic timelines do not break the company.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">The Goldilocks Round Checklist</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Decide if VC is the right train</strong><p>Institutional venture has return timelines, LP expectations, and a growth path that not every company should accept.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Name the next milestone</strong><p>Founders do not raise a "seed" round in the abstract; they raise enough to prove what gets them to Series A.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Budget from the milestone back</strong><p>Revenue targets, customer volume, ACV, hiring, product needs, and experimentation budget all have to connect.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Protect the cap table</strong><p>Round-by-round dilution can feel survivable while cumulative dilution quietly weakens the founding team's position.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Run fundraising like sales</strong><p>Build a real investor funnel, create calendar density, and avoid slow one-off conversations that kill momentum.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">The Practical Warnings</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>The desert between rounds</strong><p>Cazacu described the stretch between seed and Series A as a place where many companies die because the next proof point was not funded.</p></div>
+        <div class="stage-card"><strong>Calendar density matters</strong><p>Founders should try to create a concentrated first wave of investor meetings, not drift through weeks of disconnected calls.</p></div>
+        <div class="stage-card"><strong>SAFE over confusion</strong><p>He warned founders to understand convertible notes, interest, and early terms before letting convenience become a future financing problem.</p></div>
+        <div class="stage-card"><strong>Prep is the raise</strong><p>The fastest rounds can look quick from the outside, but the real work happens in research, warm intros, and a crisp narrative months earlier.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">VC</div><strong>Mandate Fit</strong><p>Venture is a specific kind of capital with a specific growth expectation.</p></div>
+        <div class="idea-card"><div class="idea-icon">MAP</div><strong>Milestone Planning</strong><p>Every dollar should have a job tied to the next fundable proof point.</p></div>
+        <div class="idea-card"><div class="idea-icon">ARR</div><strong>Stage Benchmarks</strong><p>Seed and Series A expectations are rising, especially around credible revenue traction.</p></div>
+        <div class="idea-card"><div class="idea-icon">CAP</div><strong>Dilution Control</strong><p>Founder ownership by Series A matters, and early terms can box the company in.</p></div>
+        <div class="idea-card"><div class="idea-icon">FNL</div><strong>Investor Funnel</strong><p>A disciplined pipeline changes the power dynamic and protects the founder's time.</p></div>
+        <div class="idea-card"><div class="idea-icon">BUF</div><strong>Operating Buffer</strong><p>Optimistic plans need room for slippage, hiring misses, and market reality.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Featured Speaker</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Vlad Cazacu</div><div class="sp-role">CEO<br>Flowlie Technologies</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 0: NETWORK EFFECT
+════════════════════════════════ -->
+<div class="panel p3">
+  <div class="sec-hero">
+    <div class="sec-tag">Relationships &amp; Community</div>
+    <h2 class="sec-title">The Network Effect: Architecting Relationships for Career and Company Growth</h2>
+    <p class="sec-lede">Networking works best when it stops feeling like networking. The real network effect isn't transactional access — it's compounding trust built before you need it.</p>
+  </div>
+
+  <div id="photoNetwork"></div>
+  <div class="photo-caption">Innovate South 2026 · Session energy — the room that made it real</div>
+
+  <div class="body">
+    <p>The panel pushed back on a common misunderstanding: networking is not collecting contacts. It is not walking into a room, shaking hands, and hoping something useful happens later. Done well, it is the practice of building trust before you need it.</p>
+
+    <p><strong>Andy Gordon</strong> framed ecosystem-building as nonlinear. You don't enter a community, meet the "right" ten people, and finish the job. You find the front doors that already exist, show up, create collisions, and earn your way deeper through substance. Meet people broadly — then deepen through value.</p>
+
+    <div class="destin-box">
+      <div class="destin-label">Host Framing — Destin Ortego</div>
+      <p class="destin-text">"The value of the room is not just who is on stage. It is who you meet before, after, and between sessions. Southern hospitality can be an ecosystem advantage — if people actually use it."</p>
+    </div>
+
+    <div class="pull">"Relationships compound when you lead with value. A person who seems peripheral today may become a key customer, partner, investor, or connector years later."<cite>— Matt Wisdom, Civilized.ai</cite></div>
+
+    <p><strong>Matt Wisdom</strong> brought the operator lens: ask honest questions, learn what people are working on, understand their story, and care before there is a transaction. The best relationships aren't engineered — they grow because trust had time to develop.</p>
+
+    <p><strong>Anhthu Nguyen</strong> reinforced the need for substance, especially in technical and hard-to-access spaces. Do the homework first. Lead with real interest. Resist the urge to perform expertise you don't have.</p>
+
+    <div class="framework">
+      <div class="fw-label">Jeremy Beyt's RAIL Framework — ThreeSixtyEight</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">R</div><div class="fw-text"><strong>Refer</strong>Connect people to something or someone useful. Help first.</div></div>
+        <div class="fw-item"><div class="fw-letter">A</div><div class="fw-text"><strong>Annoy</strong>Be willing to follow up. Don't let threads go cold.</div></div>
+        <div class="fw-item"><div class="fw-letter">I</div><div class="fw-text"><strong>Inform</strong>Send relevant resources when you come across them.</div></div>
+        <div class="fw-item"><div class="fw-letter">L</div><div class="fw-text"><strong>Love</strong>Remember there's a human on the other side of every message.</div></div>
+      </div>
+    </div>
+
+    <div class="pull">"If you can't explain the purpose of the introduction before the meeting, you may not be ready for the meeting."<cite>— Destin Ortego, Opportunity Machine</cite></div>
+
+    <p>The session closed on a clear truth: networks are not built by good intentions. They are built by kept promises. If you say you are going to make an intro, send a resource, or help someone — do it.</p>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">A Network Is an Operating System for Trust</h3>
+      <p class="deep-copy">This session translated relationship-building from a vague soft skill into a repeatable founder practice. The strongest advice was not to collect more contacts. It was to make fewer, better promises, protect the people who make introductions, and create enough surface area that opportunity has somewhere to land.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">RAIL</div><div class="metric-label">Jeremy Beyt's shorthand for relationship maintenance: refer, annoy, inform, and love.</div></div>
+      <div class="metric-card"><div class="metric-value">5x5</div><div class="metric-label">A weekly 90-minute block: reach five people you have not talked to recently and follow up with five current threads.</div></div>
+      <div class="metric-card"><div class="metric-value">20→6</div><div class="metric-label">Andy Gordon's triage pattern after an event: turn a wide room of contacts into the handful that deserve real follow-through.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">The Warm Intro Protocol</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Do the homework first</strong><p>Show up with enough context that the other person can tell you care about their work, not just their access.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Explain why the meeting matters</strong><p>If the connector has to invent the reason for the intro, the request is not ready.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Protect the connector</strong><p>A warm intro spends relational capital. Make the requester carry as much work as possible.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Follow up with value</strong><p>Send the useful thought, relevant resource, or next step that proves the first conversation was not disposable.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Keep the promise</strong><p>Trust compounds when people repeatedly do the thing they said they would do.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">Relationship Architecture in Practice</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Andy Gordon</strong><p>Find the front doors that already exist, then earn your way deeper by creating value and showing up consistently.</p></div>
+        <div class="stage-card"><strong>Matt Wisdom</strong><p>Ask honest questions about a person's story and work. Real opportunities often come from relationships that were not predictable at the start.</p></div>
+        <div class="stage-card"><strong>Jeremy Beyt</strong><p>Superconnectors are not magical. They use rituals, prompts, dinners, spreadsheets, and recurring habits to keep the network alive.</p></div>
+        <div class="stage-card"><strong>Destin Ortego</strong><p>Southern hospitality becomes an ecosystem advantage only when people turn warmth into introductions, follow-through, and shared opportunity.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">DOORS</div><strong>Find Entry Points</strong><p>Ecosystems already have rooms, leaders, and rituals. Start where momentum exists.</p></div>
+        <div class="idea-card"><div class="idea-icon">VALUE</div><strong>Lead With Help</strong><p>The fastest way to become known is to make someone else's work easier.</p></div>
+        <div class="idea-card"><div class="idea-icon">INTRO</div><strong>Use Warm Intros Well</strong><p>A strong intro includes why, why now, and why both people should care.</p></div>
+        <div class="idea-card"><div class="idea-icon">SYSTEM</div><strong>Build a Habit</strong><p>Relationship quality grows from repeated touchpoints, not one intense event.</p></div>
+        <div class="idea-card"><div class="idea-icon">ROOM</div><strong>Create Collisions</strong><p>Dinners, meetups, and roundtables create the unexpected overlaps that online networking often misses.</p></div>
+        <div class="idea-card"><div class="idea-icon">TRUST</div><strong>Do What You Said</strong><p>Reliability is the simplest and rarest networking advantage.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Speakers</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Andy Gordon</div><div class="sp-role">Associate Director, State &amp; Local Innovation<br>Federation of American Scientists</div></div>
+      <div class="sp-card"><div class="sp-name">Jeremy Beyt</div><div class="sp-role">Co-Founder / CEO<br>ThreeSixtyEight</div></div>
+      <div class="sp-card"><div class="sp-name">Matt Wisdom</div><div class="sp-role">CEO &amp; Co-Founder<br>Civilized.ai</div></div>
+      <div class="sp-card"><div class="sp-name">Anhthu Nguyen</div><div class="sp-role">Founder<br>Ad Astra Group</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Moderator</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 1: HIGH TECH HIGH TOUCH
+════════════════════════════════ -->
+<div class="panel p1">
+  <div class="sec-hero">
+    <div class="sec-tag">AI &amp; Early Sales</div>
+    <h2 class="sec-title">High Tech, High Touch: Winning Your First 100 Customers in the AI Era</h2>
+    <p class="sec-lede">AI can create more volume — more emails, more leads, more dashboards. But is it helping you find the right customer and move the right conversation forward?</p>
+  </div>
+
+  <div id="photoHighTech"></div>
+  <div class="photo-caption">Innovate South 2026 · Keynote on building agentic AI — the talk that had the room buzzing</div>
+
+  <div class="body">
+    <p>The conversation started with a hard lesson from <strong>Casey Bolsega</strong>: more outreach doesn't always mean better traction. He described running a massive email-based outbound campaign reaching thousands of prospects monthly — only to find the channel was creating activity without meaningful results. The insight wasn't that email is dead. It was that founders must know when a channel is actually working.</p>
+
+    <div class="destin-box">
+      <div class="destin-label">Host Framing — Destin Ortego</div>
+      <p class="destin-text">"The more powerful the tools get, the more important the human layer becomes. AI agents and automation on one side. Roundtables, warm intros, and real founder conversations on the other. Quality control is the missing piece."</p>
+    </div>
+
+    <div class="pull">"High tech, high touch. The technology helps the team move faster. But the human still decides what matters — still coaches, calls, listens, and learns."<cite>— Adam McInturff, Mallard Bay Outdoors</cite></div>
+
+    <p><strong>Adam McInturff</strong> framed AI as a cooperative partner at Mallard Bay — using it to analyze customer signals, sales calls, website activity, and ads so the team can see patterns faster. He uses Claude as a sales coach, running call transcripts through his playbook to identify coaching moments and sharpen how objections are handled.</p>
+
+    <p><strong>Amantha Bagdon</strong> of RxPost described the difficult transition from founder-led sales to training the first sales team. At RxPost, which serves pharmacies, she hired pharmacy technicians into customer-facing roles because they can relate to the pressure and pace of that world. That kind of trust is hard to automate.</p>
+
+    <div class="framework">
+      <div class="fw-label">How the Panel Uses AI Right Now</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">C</div><div class="fw-text"><strong>Casey</strong>Qualification tools — summarize why a company fits a target profile.</div></div>
+        <div class="fw-item"><div class="fw-letter">A</div><div class="fw-text"><strong>Amantha</strong>Monitor pharmacy licensing sources for new business opportunities.</div></div>
+        <div class="fw-item"><div class="fw-letter">Ad</div><div class="fw-text"><strong>Adam</strong>Sales call analysis, ad audience shaping, voice AI for appointment-setting.</div></div>
+        <div class="fw-item"><div class="fw-letter">→</div><div class="fw-text"><strong>The rule</strong>Write down the ideal workflow. Automate one useful piece. Don't boil the ocean.</div></div>
+      </div>
+    </div>
+
+    <div class="pull">"Your first 100 customers are not just a sales goal. They are a support promise."</div>
+
+    <p>Adam made a strong case for thinking about customer success before rushing to scale sales. Founder-led sales keeps you close to objections, product gaps, and market language. Once customers start saying yes, the company needs a way to help them succeed — otherwise, every new sale creates stress instead of momentum.</p>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">AI Does Not Replace Customer Proximity</h3>
+      <p class="deep-copy">The first-100-customers panel was refreshingly unsentimental about AI. The speakers were not anti-automation. They were anti-noise. Their shared argument was that AI only helps sales when it sharpens qualification, coaching, follow-up, and customer success instead of flooding the market with generic outreach.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">50K</div><div class="metric-label">Monthly outbound emails Casey Bolsega described in a large campaign that created volume but only a few closed deals.</div></div>
+      <div class="metric-card"><div class="metric-value">250</div><div class="metric-label">Daily phone calls Amantha Bagdon referenced while explaining RxPost's human-plus-AI pharmacy outreach model.</div></div>
+      <div class="metric-card"><div class="metric-value">0.5%</div><div class="metric-label">Opt-out rate RxPost saw in a reminder-call workflow, a signal that useful automation can feel like service instead of spam.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">The High-Tech, High-Touch Loop</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Capture real conversations</strong><p>Record discovery calls, sales calls, objections, and support pain so AI has grounded material to analyze.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Qualify before scaling</strong><p>Use AI to identify fit and disqualify weak prospects before the team spends human time.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Coach the team</strong><p>Turn call transcripts into coaching moments, objection handling, and better playbook discipline.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Audit the output</strong><p>Founders still need enough context to catch bad AI recommendations and protect brand voice.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Support before scaling sales</strong><p>The first 100 customers are a promise. Scaling demand without support turns traction into churn risk.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">Operator Notes</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Casey Bolsega</strong><p>The big outbound experiment was valuable because it invalidated a channel. AI should make testing faster, including the tests that tell you to stop.</p></div>
+        <div class="stage-card"><strong>Adam McInturff</strong><p>Mallard Bay uses AI as a sales coach and signal processor, not as a replacement for knowing the customer.</p></div>
+        <div class="stage-card"><strong>Amantha Bagdon</strong><p>RxPost's sales motion depends on people who understand pharmacies. AI helps package and scale what founder-led sales already learned.</p></div>
+        <div class="stage-card"><strong>The shared warning</strong><p>Generic AI writing can erase voice. The founder still has to know what good sounds like.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">TEST</div><strong>Channel Validation</strong><p>Measure whether outreach creates useful conversations, not just activity.</p></div>
+        <div class="idea-card"><div class="idea-icon">CALL</div><strong>Transcript Mining</strong><p>Use recordings to identify objections, buying language, and qualification patterns.</p></div>
+        <div class="idea-card"><div class="idea-icon">VOICE</div><strong>Brand Voice</strong><p>AI drafts should sound like the founder or company, not like default software copy.</p></div>
+        <div class="idea-card"><div class="idea-icon">TEAM</div><strong>First Sales Hires</strong><p>Founder-led learning has to be packaged before the first sales team can succeed.</p></div>
+        <div class="idea-card"><div class="idea-icon">CS</div><strong>Customer Success</strong><p>Support structure is part of go-to-market, especially before the company adds more sales capacity.</p></div>
+        <div class="idea-card"><div class="idea-icon">ONE</div><strong>One Workflow at a Time</strong><p>Write the ideal AI workflow, then automate one useful piece instead of trying to automate everything.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Speakers</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Adam McInturff</div><div class="sp-role">Chief Revenue Officer<br>Mallard Bay Outdoors</div></div>
+      <div class="sp-card"><div class="sp-name">Casey Bolsega</div><div class="sp-role">Sr. Portfolio Manager<br>Yorktown Fund powered by Intrepid</div></div>
+      <div class="sp-card"><div class="sp-name">Amantha Bagdon</div><div class="sp-role">Founder &amp; CEO<br>RxPost</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Moderator</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 2: MINDSET IN TECH
+════════════════════════════════ -->
+<div class="panel p2">
+  <div class="sec-hero">
+    <div class="sec-tag">Career &amp; Learning</div>
+    <h2 class="sec-title">The Mindset You Need to Survive (and Thrive) in Tech</h2>
+    <p class="sec-lede">How many people in the room were doing something they didn't go to school for? A lot of hands went up. That became the heart of the session.</p>
+  </div>
+
+  <div id="photoMindset"></div>
+  <div class="photo-caption">Innovate South 2026 · On stage — real practitioners, real paths into tech</div>
+
+  <div class="body">
+    <p>This session gave the room a practical, human-centered look at what it takes to build a career in technology when your path in wasn't traditional. The panel showed that non-linear routes into tech aren't detours — they're assets.</p>
+
+    <div class="destin-box">
+      <div class="destin-label">Host Framing — Destin Ortego</div>
+      <p class="destin-text">"Tech is not only for people who had the perfect path. It is for people willing to learn, practice, adapt, and get reps. Many people in tech are doing work they did not originally study for. That is a Louisiana workforce message."</p>
+    </div>
+
+    <p><strong>Cory Murray</strong> came through music. A background in jazz and composition translated directly into technical problem-solving — both are built on systems, patterns, and abstraction. A limited set of notes becomes endless forms. Basic logic becomes platforms, tools, and workflows.</p>
+
+    <div class="pull">"In tech, knowing how to learn may matter more than what you already know."<cite>— Jakob Goodwin, Techneaux Technology Services</cite></div>
+
+    <p><strong>Jakob Goodwin</strong> came through mathematics, originally planning on education. What transferred wasn't a certification — it was the ability to absorb difficult information, read documentation, and work through complex ideas with comfort for not knowing everything at the start.</p>
+
+    <div class="framework">
+      <div class="fw-label">The Panel on AI as a Learning Tool</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">N</div><div class="fw-text"><strong>Nolan</strong>You wouldn't push intern code to production without reviewing it. Same applies to AI.</div></div>
+        <div class="fw-item"><div class="fw-letter">J</div><div class="fw-text"><strong>Jakob</strong>Testing and validation aren't optional. AI moves faster, but quality still matters.</div></div>
+        <div class="fw-item"><div class="fw-letter">C</div><div class="fw-text"><strong>Cory</strong>Learning with AI is like learning an instrument. Anyone can make noise. Getting good takes reps.</div></div>
+        <div class="fw-item"><div class="fw-letter">→</div><div class="fw-text"><strong>The rule</strong>Context is king. AI produces average answers unless you bring real judgment.</div></div>
+      </div>
+    </div>
+
+    <div class="pull">"Talent grows faster in environments where asking questions is normal."</div>
+
+    <p>The session made a strong case for mentorship — Nolan credited Techneaux and early Lafayette tech figures with showing him a real career was possible in Louisiana. Mentorship meant asking questions, admitting what you don't know, and learning from people who can save you years of mistakes.</p>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">The Skill Is Learning How to Learn</h3>
+      <p class="deep-copy">The mindset panel turned a career conversation into a workforce message. Nolan Edwards, Cory Murray, and Jakob Goodwin each came at tech from a different route, but they converged on the same principle: the durable skill is not memorizing a tool. It is learning quickly, validating carefully, and staying humble enough to ask better questions.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">3</div><div class="metric-label">Practitioner paths on stage: SCADA integration, systems engineering, and business development inside technical organizations.</div></div>
+      <div class="metric-card"><div class="metric-value">5-15</div><div class="metric-label">Minutes Nolan used to describe how fast AI can help someone orient to a new topic before deeper learning begins.</div></div>
+      <div class="metric-card"><div class="metric-value">$20</div><div class="metric-label">Cory's practical reminder that a low-cost AI subscription can become a personal practice gym if you use it for reps.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">The Tech Mindset Stack</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Get comfortable not knowing</strong><p>Jakob tied SCADA work to reading documentation, experimenting, and moving through uncertainty without freezing.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Use AI as a learning accelerant</strong><p>Nolan treated AI as a way to get oriented quickly, not as a substitute for responsibility or understanding.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Bring context</strong><p>Cory's "context is king" point was the core AI lesson: better prompts come from better human judgment.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Validate before production</strong><p>The panel was clear that AI output, like intern code, needs review before it touches real systems.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Find mentors and ask</strong><p>Learning speeds up when the environment makes questions normal and turns experience into shared infrastructure.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">How They Framed the Work</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Nolan Edwards</strong><p>The superpower is taking in information and learning quickly, then validating what the tool gives you before using it.</p></div>
+        <div class="stage-card"><strong>Cory Murray</strong><p>AI is a rubber duck and an instrument. Anyone can make noise; expertise comes from practice and taste.</p></div>
+        <div class="stage-card"><strong>Jakob Goodwin</strong><p>Technical careers reward people who can read, test, learn, and stay honest about what they do not know yet.</p></div>
+        <div class="stage-card"><strong>The Lafayette signal</strong><p>Mentorship at companies like Techneaux and Pelican Engineering shows that serious technical careers can be built here.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">PATH</div><strong>Nonlinear Careers</strong><p>Math, music, operations, and technical curiosity can all become entry points into tech.</p></div>
+        <div class="idea-card"><div class="idea-icon">AI</div><strong>Learning Partner</strong><p>AI helps people get unstuck, but the user still owns quality and judgment.</p></div>
+        <div class="idea-card"><div class="idea-icon">TEST</div><strong>Verification</strong><p>Production work still requires testing environments, review, and healthy skepticism.</p></div>
+        <div class="idea-card"><div class="idea-icon">REPS</div><strong>Practice</strong><p>The panel returned again and again to repetition: try, break, ask, validate, repeat.</p></div>
+        <div class="idea-card"><div class="idea-icon">MENT</div><strong>Mentorship</strong><p>Good mentors save years by making hard-earned context easier to access.</p></div>
+        <div class="idea-card"><div class="idea-icon">LA</div><strong>Local Opportunity</strong><p>The session made tech feel reachable without asking people to leave Acadiana.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Speakers</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Nolan Edwards</div><div class="sp-role">Director of Business Development<br>Pelican Engineering</div></div>
+      <div class="sp-card"><div class="sp-name">Cory Murray</div><div class="sp-role">Systems Engineer<br>Premium Parking</div></div>
+      <div class="sp-card"><div class="sp-name">Jakob Goodwin</div><div class="sp-role">SCADA Integrator<br>Techneaux Technology Services</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Moderator</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 3: TECH MEETUPS
+════════════════════════════════ -->
+<div class="panel p3">
+  <div class="sec-hero">
+    <div class="sec-tag">Ecosystem &amp; Community</div>
+    <h2 class="sec-title">Tech Meetups in Acadiana: Find Your Community</h2>
+    <p class="sec-lede">Acadiana's tech ecosystem isn't just made up of companies. It's made up of rooms where people ask questions, share what they know, and find the next person who helps them move forward.</p>
+  </div>
+
+  <div id="photoMeetups"></div>
+  <div class="photo-caption">Innovate South 2026 · The room that shows up every year</div>
+
+  <div class="body">
+    <p>On April 22, 2026, this session made the invisible map visible — bringing together local organizers who are already building the rooms where Acadiana's tech community gathers and grows.</p>
+
+    <div class="destin-box">
+      <div class="destin-label">Host Framing — Destin Ortego</div>
+      <p class="destin-text">"People do not need to leave Louisiana to find serious tech conversations. They need better visibility into who is already building, hiring, mentoring, investing, and helping. Innovate South is how the map becomes real."</p>
+    </div>
+
+    <p><strong>John "Zeke" Ezekiel</strong> opened with Acadiana Software Group, which meets at Opportunity Machine. It's not only for polished experts — it's a practice ground where people can present what they're learning, workshop ideas, talk about burnout, and build confidence before stepping onto larger stages.</p>
+
+    <div class="pull">"Opportunity doesn't strike if you never enter the room."<cite>— Hunter Thevis, S1 Technology / DEF CON Acadiana</cite></div>
+
+    <p><strong>Hunter Thevis</strong> built DEF CON Acadiana (DCG 337) from a local cybersecurity meetup into a monthly gathering with hundreds of members. People have found jobs, built business relationships, and connected across career stages through it. The goal is simple: make Acadiana a harder target by helping security professionals learn from each other.</p>
+
+    <p><strong>Brandon Brown</strong> widened the map — pointing to groups across risk, auditing, critical infrastructure, women in tech, and the Lafayette Regional Tech Council, which hosts quarterly meetups for both company leaders and technical talent in separate rooms so both can speak honestly.</p>
+
+    <div class="framework">
+      <div class="fw-label">How to Get Started — Panel Advice</div>
+      <div class="fw-grid">
+        <div class="fw-item"><div class="fw-letter">Z</div><div class="fw-text"><strong>Zeke</strong>Pick a topic that interests you. Present something you're learning — teaching it solidifies what you know.</div></div>
+        <div class="fw-item"><div class="fw-letter">H</div><div class="fw-text"><strong>Hunter</strong>Find the smartest friend you know in the area you care about. Find out where those people gather.</div></div>
+        <div class="fw-item"><div class="fw-letter">B</div><div class="fw-text"><strong>Brandon</strong>Start with your passion. Join a Slack, follow the groups, show up once.</div></div>
+        <div class="fw-item"><div class="fw-letter">→</div><div class="fw-text"><strong>The call</strong>If the meetup you need doesn't exist yet, maybe you're the person who starts it.</div></div>
+      </div>
+    </div>
+
+    <div class="pull">"You don't have to know everyone. You don't have to attend everything. You just have to start finding your people."</div>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">The Ecosystem Is a Set of Rooms</h3>
+      <p class="deep-copy">The meetup session connected the social side of the conference to the workforce data underneath it. Acadiana's tech ecosystem grows when people can find the rooms where practitioners gather, where students can see a path, and where employers can meet the talent they keep saying they need.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">320</div><div class="metric-label">Members Hunter Thevis cited for DEF CON Acadiana / DCG 337, a monthly cybersecurity community rooted in Acadiana.</div></div>
+      <div class="metric-card"><div class="metric-value">6,218</div><div class="metric-label">Tech jobs in Acadiana surfaced through the Lafayette Regional Tech Council dashboard reveal.</div></div>
+      <div class="metric-card"><div class="metric-value">$76K+</div><div class="metric-label">Median tech earnings in the regional data, nearly double the broader local market cited in the session.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">How to Find Your Community</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Start with a real curiosity</strong><p>Pick the technical, security, AI, data, or operations topic you would want to learn about even without a job posting attached.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Join the existing channels</strong><p>Acadiana Software Group, DEF CON Acadiana, LRTC, ISACA, InfraGard, BTRSec, and other groups already create entry points.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Show up more than once</strong><p>The first meetup gives you faces. Repeated attendance builds trust and makes follow-up less awkward.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Present what you are learning</strong><p>Zeke's point was that presenting solidifies knowledge and gives the community another useful node.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Start what is missing</strong><p>The panel identified room for more AI practitioner gatherings. If the room does not exist, the organizer may be in the audience.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">From the Stage</div>
+      <h3 class="deep-title">What the Organizers Revealed</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>John "Zeke" Ezekiel</strong><p>Acadiana Software Group is a place to present, practice, workshop ideas, and find other builders who are learning in public.</p></div>
+        <div class="stage-card"><strong>Hunter Thevis</strong><p>DEF CON Acadiana exists to make Acadiana a harder target by connecting security practitioners, students, founders, and executives.</p></div>
+        <div class="stage-card"><strong>Brandon Brown</strong><p>The local map is broader than one meetup: risk, audit, infrastructure, women in tech, and cybersecurity groups all create career surface area.</p></div>
+        <div class="stage-card"><strong>LRTC dashboard</strong><p>The data made the community work concrete: tech jobs, earnings, degree requirements, and industry spread are now visible enough to organize around.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">ASG</div><strong>Acadiana Software Group</strong><p>A monthly space for developers, hobbyists, presenters, and people looking for their first technical room.</p></div>
+        <div class="idea-card"><div class="idea-icon">337</div><strong>DEF CON Acadiana</strong><p>A cybersecurity community mixing practitioners, students, founders, vendors, and career changers.</p></div>
+        <div class="idea-card"><div class="idea-icon">LRTC</div><strong>Regional Tech Council</strong><p>Quarterly rooms for employers, owners, and technical talent to speak with the right peers.</p></div>
+        <div class="idea-card"><div class="idea-icon">DATA</div><strong>Dashboard Reveal</strong><p>LafayetteTechDashboard.com turned workforce claims into visible regional data.</p></div>
+        <div class="idea-card"><div class="idea-icon">JOBS</div><strong>Career Access</strong><p>Meetups create informal pathways to jobs, referrals, mentorship, and business relationships.</p></div>
+        <div class="idea-card"><div class="idea-icon">NEXT</div><strong>Year Two</strong><p>The future state includes stronger employer connections, internships, K-12 exposure, and more practitioner-led rooms.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speakers-sec">
+    <div class="sp-label">Speakers</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">John "Zeke" Ezekiel</div><div class="sp-role">Software Developer, Diamond Marine Services<br>Acadiana Software Group organizer</div></div>
+      <div class="sp-card"><div class="sp-name">Hunter Thevis</div><div class="sp-role">President, S1 Technology<br>Founder, DEF CON Acadiana / DCG 337</div></div>
+      <div class="sp-card"><div class="sp-name">Brandon Brown</div><div class="sp-role">Cybersecurity Professional<br>NextGenBytes</div></div>
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Opportunity Machine<br><span class="mod-badge">Moderator</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     PANEL 4: TECH TANK
+════════════════════════════════ -->
+<div class="panel p4">
+  <div class="sec-hero">
+    <div class="sec-tag">Pitch Competition</div>
+    <h2 class="sec-title">Tech Tank 2026: Six Founders, $25,000, One Stage</h2>
+    <p class="sec-lede">No great conference ends without non-dilutive capital on the line. When preparation meets opportunity, success follows.</p>
+  </div>
+
+  <div id="photoWinners"></div>
+  <div class="photo-caption">Tech Tank 2026 · 1st Place: Mirror Labs ($14,000) · Runner-Up: XR MediX ($8,500) · April 29, 2026</div>
+
+  <div class="body">
+    <p>The Tech Tank competition brought six of Innovate South's best and brightest to the stage for $25,000 in non-dilutive prize money. After three days of sessions, panels, and hallway conversations, the energy in the room shifted — this was the moment founders had been building toward.</p>
+
+    <div class="destin-box">
+      <div class="destin-label">Host Framing — Destin Ortego</div>
+      <p class="destin-text">"This is not abstract ecosystem talk. Louisiana has specific founders solving specific problems in specific industries. The Tech Tank is where that shows up in real time — preparation meeting opportunity on a public stage."</p>
+    </div>
+  </div>
+
+  <div class="editorial-deep">
+    <div class="deep-block">
+      <div class="deep-kicker">The Deep Read</div>
+      <h3 class="deep-title">The Conference Became a Founder Stage</h3>
+      <p class="deep-copy">Tech Tank gave the recap its clearest proof point: six startups, four-minute pitches, judge Q&A, community asks, and non-dilutive money attached to the outcome. The format turned ecosystem support into something founders could actually use the next morning.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">6</div><div class="metric-label">Founders/startups pitched on stage, representing construction, health, legal, defense, disaster response, and wellness problems.</div></div>
+      <div class="metric-card"><div class="metric-value">$25K</div><div class="metric-label">Total non-dilutive prize pool positioned as capital founders could keep without giving up equity.</div></div>
+      <div class="metric-card"><div class="metric-value">4+3</div><div class="metric-label">Four-minute founder pitches followed by three minutes of judge Q&A, keeping the format fast and focused.</div></div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Framework</div>
+      <h3 class="deep-title">How Tech Tank Worked</h3>
+      <div class="deep-list">
+        <div class="deep-step"><div class="step-num">01</div><div><strong>Pitch the company clearly</strong><p>Each founder had to explain the problem, product, market, business model, traction, and team in a compressed format.</p></div></div>
+        <div class="deep-step"><div class="step-num">02</div><div><strong>Make the ask to the room</strong><p>The ask was aimed at community stakeholders, not just investors: introductions, customers, expertise, and connections.</p></div></div>
+        <div class="deep-step"><div class="step-num">03</div><div><strong>Answer judges live</strong><p>Three minutes of Q&A forced founders to defend assumptions while staying composed in public.</p></div></div>
+        <div class="deep-step"><div class="step-num">04</div><div><strong>Let the room participate</strong><p>The crowd favorite vote made the audience part of the process, not just passive observers.</p></div></div>
+        <div class="deep-step"><div class="step-num">05</div><div><strong>Put money behind support</strong><p>First place, runner-up, and crowd favorite prizes converted attention into practical startup fuel.</p></div></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Winner Coverage</div>
+      <h3 class="deep-title">Mirror Labs and XR MediX</h3>
+      <div class="stage-stack">
+        <div class="stage-card"><strong>Mirror Labs</strong><p>Kyle Robichaux pitched collaborative 3D job sites for construction teams, built around remote verification, LiDAR-backed spatial accuracy, issue tracking, and reducing costly rework.</p></div>
+        <div class="stage-card"><strong>Mirror's traction</strong><p>The company described moving from customer discovery to a working platform in six months, with five companies testing and project integrations under discussion.</p></div>
+        <div class="stage-card"><strong>XR MediX</strong><p>Prabhakar Vemavarapu pitched augmented-reality needle guidance for joint injections, aiming to improve accuracy without relying on live imaging or specialized rooms.</p></div>
+        <div class="stage-card"><strong>XR's traction</strong><p>The team cited 300-plus customer discovery interviews, early adopter signups, awards, and clinical partnership needs as part of its next step.</p></div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <div class="deep-kicker">Session Breakdown</div>
+      <h3 class="deep-title">Key Ideas Covered</h3>
+      <div class="idea-grid">
+        <div class="idea-card"><div class="idea-icon">ROOM</div><strong>Community as Capital</strong><p>Founders were explicitly asking the room for introductions and expertise, not only checks.</p></div>
+        <div class="idea-card"><div class="idea-icon">ND</div><strong>Non-Dilutive Fuel</strong><p>The prize structure gave founders useful cash while letting them keep equity.</p></div>
+        <div class="idea-card"><div class="idea-icon">MIR</div><strong>Construction Tech</strong><p>Mirror Labs showed a Gulf South pathway into an enormous, practical industry problem.</p></div>
+        <div class="idea-card"><div class="idea-icon">XR</div><strong>Health Innovation</strong><p>XR MediX connected AR, AI, and clinical workflow into a medical access story.</p></div>
+        <div class="idea-card"><div class="idea-icon">ASK</div><strong>Specific Asks</strong><p>The best pitch asks were tangible: construction connections, clinical partners, investors, and domain expertise.</p></div>
+        <div class="idea-card"><div class="idea-icon">YEAR</div><strong>Emerging Startup</strong><p>Mirror Labs earned both first place and the 2026 Emerging Startup of the Year designation.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="winner-card">
+    <div class="wc-place">1st Place · 2026 Emerging Startup of the Year</div>
+    <div class="wc-name">Mirror Labs</div>
+    <div class="wc-amount">$14,000</div>
+    <div class="wc-quote">"When preparation meets opportunity, success follows." — Destin Ortego</div>
+  </div>
+
+  <div class="winner-card secondary">
+    <div class="wc-place">Runner-Up · Tech Tank 2026</div>
+    <div class="wc-name">XR MediX</div>
+    <div class="wc-amount">$8,500</div>
+    <div class="wc-quote">Recognized for innovation and strong presentation at the Innovate South stage.</div>
+  </div>
+
+  <div class="body tight-top">
+    <div class="pull">"This is the Acadiana tech ecosystem on full display. In true color."<cite>— Innovate South 2026 Throughline</cite></div>
+
+    <p>For Opportunity Machine founders, the Tech Tank represents the full arc of the Builder journey made public: validated ideas, working products, and the kind of stage presence that only comes from real preparation. Mirror Labs proved that preparation, when it meets opportunity, breeds success.</p>
+
+    <p>The three-day event drew speakers from Silicon Valley, investors, experienced advisors, and technical builders from across Louisiana and the nation — all under the banner of <em>innovation with an accent</em>. Acadiana didn't try to sound like somewhere else. It sounded like itself.</p>
+
+    <p>That's the point. That's always been the point.</p>
+  </div>
+
+  <div class="speakers-sec compact">
+    <div class="sp-label">Event Leadership</div>
+    <div class="sp-grid">
+      <div class="sp-card"><div class="sp-name">Destin Ortego</div><div class="sp-role">Host &amp; Emcee<br>Opportunity Machine</div></div>
+      <div class="sp-card"><div class="sp-name">Mirror Labs</div><div class="sp-role">1st Place &amp; 2026 Emerging<br>Startup of the Year</div></div>
+      <div class="sp-card"><div class="sp-name">XR MediX</div><div class="sp-role">Runner-Up<br>Tech Tank 2026</div></div>
+      <div class="sp-card"><div class="sp-name">LEDA</div><div class="sp-role">Event Sponsor<br>Lafayette Economic Development Authority</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-left">Opportunity Machine · Innovate South 2026 · Lafayette, Louisiana</div>
+  <a class="footer-link" href="https://www.innovatesouth.org/" target="_blank">innovatesouth.org →</a>
+</footer>
+
+<script>
+// Assign photos after DOM and photo vars are ready
+window.addEventListener('DOMContentLoaded', () => {
+  function glass(src, alt) {
+    return `<div class="glass-showcase">
+              <img src="${src}" class="glass-bg" alt="">
+              <img src="${src}" class="glass-img" alt="${alt}">
+            </div>`;
+  }
+
+  // Hero — lead with audience energy from the room.
+  document.getElementById('heroImg').src = HERO_APPLAUSE;
+
+  // Opening note
+  const intro = document.getElementById('photoIntro');
+  intro.innerHTML = `<div class="photo-stack">
+                      ${glass(MANDI_MITCHELL, 'Mandi Mitchell speaking at Innovate South 2026')}
+                      ${glass(DESTIN_OM_TEAM, 'Destin Ortego with the Opportunity Machine team on the Innovate South stage')}
+                    </div>`;
+
+  // AI-native culture keynote
+  const pj = document.getElementById('photoJeremiah');
+  pj.innerHTML = glass(JEREMIAH_OWYANG, 'Jeremiah Owyang presenting the SF Bay AI Ecosystem slide');
+
+  // Investor panel
+  const pi = document.getElementById('photoInvestorPanel');
+  pi.innerHTML = `<div class="photo-stack">
+                    ${glass(INVESTOR_PANEL_WIDE, 'Investor panel on the Innovate South stage')}
+                    <div class="photo-grid-pair">
+                      ${glass(INVESTOR_PANEL_CLOSE_1, 'Investor panel close-up')}
+                      ${glass(INVESTOR_PANEL_CLOSE_2, 'Investor panel speaker close-up')}
+                    </div>
+                  </div>`;
+
+  // Goldilocks Round keynote
+  const pv = document.getElementById('photoVlad');
+  pv.innerHTML = glass(VLAD_CAZACU, 'Vlad Cazacu speaking during The Goldilocks Round');
+
+  // Network Effect
+  const pn = document.getElementById('photoNetwork');
+  pn.innerHTML = `<div class="photo-stack">
+                    ${glass(NETWORK_1, 'Network Effect Panel')}
+                    <div class="photo-grid-pair">
+                      ${glass(NETWORK_2, 'Network Effect Speaker')}
+                      ${glass(NETWORK_3, 'Network Effect Speaker')}
+                    </div>
+                  </div>`;
+
+  // High Tech — stack the photos naturally so the 4-person panel isn't cropped!
+  const ht = document.getElementById('photoHighTech');
+  ht.innerHTML = `<div class="photo-stack">
+                    ${glass(Building_an_AI_Native_Culture_for_the_Agentic_Future, 'Keynote on agentic AI with SF Bay AI Ecosystem diagram')}
+                    ${glass(IS_2026_452, 'Panel speakers on stage')}
+                  </div>`;
+
+  // Mindset
+  const pm = document.getElementById('photoMindset');
+  pm.innerHTML = `<div class="photo-stack">
+                    ${glass(MINDSET_1, 'Mindset in Tech panel')}
+                    ${glass(MINDSET_2, 'Mindset in Tech discussion')}
+                  </div>`;
+
+  // Meetups
+  const pmt = document.getElementById('photoMeetups');
+  pmt.innerHTML = glass(MEETUPS_1, 'Tech Meetups panel');
+
+  // Tech Tank winners
+  const pw = document.getElementById('photoWinners');
+  const winnerHtml = `<div class="photo-stack">
+                        <div class="photo-grid-pair">
+                          ${glass(WINNER_1, 'Tech Tank Runner Up Check')}
+                          ${glass(WINNER_2, 'Tech Tank 1st Place Check')}
+                        </div>
+                        ${glass(TECHTANK_1, 'Tech Tank Pitch')}
+                        <div class="photo-grid-pair">
+                          ${glass(TECHTANK_2, 'Tech Tank Pitch')}
+                          ${glass(TECHTANK_3, 'Tech Tank Pitch')}
+                        </div>
+                        <div class="photo-grid-pair">
+                          ${glass(TECHTANK_4, 'Tech Tank Pitch')}
+                          ${glass(TECHTANK_5, 'Tech Tank Pitch')}
+                        </div>
+                      </div>`;
+  pw.innerHTML = winnerHtml;
+
+  // Nav behavior
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.panel')[parseInt(btn.dataset.s)].classList.add('active');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  });
+});
+</script>
+
+</body>
+</html>
