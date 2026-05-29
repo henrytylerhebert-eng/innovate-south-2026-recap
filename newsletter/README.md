@@ -10,6 +10,7 @@ Mailchimp-ready materials for promoting the Innovate South 2026 recap.
 - `startup-scoop-format.md` - reusable OM newsletter format based on the current Mailchimp/Canva pattern.
 - `issue-intake-template.md` - planning packet for situational issues, current events, programming, ecosystem opportunities, jobs, and partner updates.
 - `review-checklist.md` - pre-send QA checklist for source state, Canva assets, Mailchimp build, links, and approvals.
+- `issues/` - rebuilt issue drafts and Mailchimp build maps.
 - `mailchimp/build-guide.md` - step-by-step Mailchimp assembly instructions.
 - `mailchimp/email-safe-template.html` - optional code-your-own HTML version.
 
