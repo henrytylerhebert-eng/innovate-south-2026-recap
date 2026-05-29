@@ -14,6 +14,7 @@ After GitHub Pages finishes deploying, the public URL should be:
 
 - `index.html` - complete single-page recap with scoped CSS and vanilla JavaScript.
 - `images/` - event photos and logo assets referenced by the page.
+- `newsletter/` - Mailchimp-ready launch newsletter, segment variants, UTM links, and optional email-safe HTML.
 - `docs/` - operating notes for deployment, source handling, and content governance.
 - `.github/workflows/pages.yml` - GitHub Pages deployment workflow.
 

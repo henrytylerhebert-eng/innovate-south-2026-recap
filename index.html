@@ -329,15 +329,15 @@ const WINNER_2 = 'images/winner_2.jpg';
 <div id="tab-article">
 
 <nav class="session-nav">
-  <button class="nav-btn active" data-s="0">Opening Note</button>
-  <button class="nav-btn" data-s="1">AI-Native Culture</button>
-  <button class="nav-btn" data-s="2">Investor Panel</button>
-  <button class="nav-btn" data-s="3">Goldilocks Round</button>
-  <button class="nav-btn" data-s="4">The Network Effect</button>
-  <button class="nav-btn" data-s="5">High Tech, High Touch</button>
-  <button class="nav-btn" data-s="6">Mindset in Tech</button>
-  <button class="nav-btn" data-s="7">Tech Meetups</button>
-  <button class="nav-btn" data-s="8">Tech Tank 2026</button>
+  <button class="nav-btn active" data-s="0" data-slug="opening-note">Opening Note</button>
+  <button class="nav-btn" data-s="1" data-slug="ai-native-culture">AI-Native Culture</button>
+  <button class="nav-btn" data-s="2" data-slug="investor-panel">Investor Panel</button>
+  <button class="nav-btn" data-s="3" data-slug="goldilocks-round">Goldilocks Round</button>
+  <button class="nav-btn" data-s="4" data-slug="network-effect">The Network Effect</button>
+  <button class="nav-btn" data-s="5" data-slug="high-tech-high-touch">High Tech, High Touch</button>
+  <button class="nav-btn" data-s="6" data-slug="mindset-in-tech">Mindset in Tech</button>
+  <button class="nav-btn" data-s="7" data-slug="tech-meetups">Tech Meetups</button>
+  <button class="nav-btn" data-s="8" data-slug="tech-tank-2026">Tech Tank 2026</button>
 </nav>
 
 <!-- ════════════════════════════════
@@ -1303,15 +1303,34 @@ window.addEventListener('DOMContentLoaded', () => {
   pw.innerHTML = winnerHtml;
 
   // Nav behavior
-  document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.panel')[parseInt(btn.dataset.s)].classList.add('active');
+  const navButtons = document.querySelectorAll('.nav-btn');
+  const panels = document.querySelectorAll('.panel');
+  function activateTab(btn, shouldScroll = true, shouldUpdateHash = true) {
+    navButtons.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    panels[parseInt(btn.dataset.s)].classList.add('active');
+    if (shouldUpdateHash && btn.dataset.slug) {
+      history.pushState(null, '', `#${btn.dataset.slug}`);
+    }
+    if (shouldScroll) {
       window.scrollTo({top: 0, behavior: 'smooth'});
-    });
+    }
+  }
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => activateTab(btn));
   });
+
+  function activateHashTab() {
+    const slug = window.location.hash.replace('#', '');
+    if (!slug) return;
+    const target = document.querySelector(`.nav-btn[data-slug="${slug}"]`);
+    if (target) activateTab(target, false, false);
+  }
+
+  activateHashTab();
+  window.addEventListener('hashchange', activateHashTab);
 });
 </script>
 
