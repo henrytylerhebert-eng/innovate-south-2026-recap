@@ -4,6 +4,16 @@
 
 Use Mailchimp's regular email builder and assemble the newsletter with content blocks. This is easier to edit, safer for non-technical review, and less brittle than a code-your-own template.
 
+For OM Startup Scoop style issues, preserve the existing Mailchimp pattern:
+
+- OM logo/contact header.
+- Image-based top navigation tabs.
+- Canva-generated hero or section graphics.
+- Short live-text editorial blocks.
+- One CTA button per module.
+- Divider between modules.
+- Existing social/footer area with Mailchimp compliance links.
+
 ## Campaign Setup
 
 - Campaign name: `Innovate South 2026 Recap Launch`
@@ -64,4 +74,3 @@ Before sending:
 - Confirm required Mailchimp footer content is present.
 
 Mailchimp's own guidance recommends previewing and testing because email clients render HTML differently, and Mailchimp requires the `*|UNSUB|*` merge tag in emails.
-
